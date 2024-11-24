@@ -7,7 +7,6 @@ console.log('Starting SSR for Shell');
   await initNodeFederation({
     remotesOrManifestUrl: '../browser/federation.manifest.json',
     relBundlePath: '../browser/',
-    // throwIfRemoteNotFound: true,
   });
   
   await import('./bootstrap-server');

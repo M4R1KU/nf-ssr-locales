@@ -1,6 +1,4 @@
 import { initNodeFederation } from '@softarc/native-federation-node';
-import { cwd } from 'process';
-import * as path from 'node:path';
 
 (async () => {
 
@@ -8,6 +6,6 @@ import * as path from 'node:path';
     relBundlePath: '../browser/'
   });
   
-  import('./bootstrap-server');
+  await import('./bootstrap-server');
 
 })();
