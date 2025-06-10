@@ -36,10 +36,10 @@
 					}
 				},
 				"extract-i18n": {
-					"builder": "@angular-devkit/build-angular:extract-i18n"
+					"builder": "@angular/build:extract-i18n"
 				},
 				"test": {
-					"builder": "@angular-devkit/build-angular:karma",
+					"builder": "@angular/build:karma",
 					"options": {
 						"polyfills": [
 							"zone.js",
@@ -59,7 +59,7 @@
 					}
 				},
 				"esbuild": {
-					"builder": "@angular-devkit/build-angular:application",
+					"builder": "@angular/build:application",
 					"options": {
 						"outputPath": "dist/shell",
 						"index": "projects/shell/src/index.html",
@@ -110,7 +110,7 @@
 					"defaultConfiguration": "production"
 				},
 				"serve-original": {
-					"builder": "@angular-devkit/build-angular:dev-server",
+					"builder": "@angular/build:dev-server",
 					"configurations": {
 						"production": {
 							"buildTarget": "shell:esbuild:production"
@@ -160,10 +160,10 @@
 					}
 				},
 				"extract-i18n": {
-					"builder": "@angular-devkit/build-angular:extract-i18n"
+					"builder": "@angular/build:extract-i18n"
 				},
 				"test": {
-					"builder": "@angular-devkit/build-angular:karma",
+					"builder": "@angular/build:karma",
 					"options": {
 						"polyfills": [
 							"zone.js",
@@ -183,7 +183,7 @@
 					}
 				},
 				"esbuild": {
-					"builder": "@angular-devkit/build-angular:application",
+					"builder": "@angular/build:application",
 					"options": {
 						"outputPath": "dist/mfe1",
 						"index": "projects/mfe1/src/index.html",
@@ -234,7 +234,7 @@
 					"defaultConfiguration": "production"
 				},
 				"serve-original": {
-					"builder": "@angular-devkit/build-angular:dev-server",
+					"builder": "@angular/build:dev-server",
 					"configurations": {
 						"production": {
 							"buildTarget": "mfe1:esbuild:production"
@@ -250,5 +250,31 @@
 				}
 			}
 		}
-	}
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "type": "component"
+    },
+    "@schematics/angular:directive": {
+      "type": "directive"
+    },
+    "@schematics/angular:service": {
+      "type": "service"
+    },
+    "@schematics/angular:guard": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:interceptor": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:module": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:pipe": {
+      "typeSeparator": "."
+    },
+    "@schematics/angular:resolver": {
+      "typeSeparator": "."
+    }
+  }
 }
