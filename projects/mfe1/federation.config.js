@@ -19,9 +19,11 @@ module.exports = withNativeFederation({
     'rxjs/webSocket',
     /^@softarc\/native-federation-node/
     // Add further packages you don't need at runtime
-  ]
+  ],
 
   // Please read our FAQ about sharing libs:
   // https://shorturl.at/jmzH0
-  
+  features: {
+    ignoreUnusedDeps: true
+  }
 });

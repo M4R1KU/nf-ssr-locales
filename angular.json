@@ -9,6 +9,9 @@
 			"root": "projects/shell",
 			"sourceRoot": "projects/shell/src",
 			"prefix": "app",
+			"i18n": {
+				"sourceLocale": "de-CH"
+			},
 			"architect": {
 				"build": {
 					"builder": "@angular-architects/native-federation:build",
@@ -132,6 +135,9 @@
 			"root": "projects/mfe1",
 			"sourceRoot": "projects/mfe1/src",
 			"prefix": "app",
+			"i18n": {
+				"sourceLocale": "de-CH"
+			},
 			"architect": {
 				"build": {
 					"builder": "@angular-architects/native-federation:build",

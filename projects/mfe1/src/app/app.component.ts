@@ -1,20 +1,25 @@
-import { initFederation } from '@angular-architects/native-federation';
+import { DatePipe } from '@angular/common';
+import { CurrencyPipe } from '@angular/common';
+import { signal } from '@angular/core';
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  imports: [
+    CurrencyPipe, DatePipe
+  ]
 })
 export class AppComponent {
   title = 'mfe1';
-  constructor() {
+  date = new Date();
+  showPrice = signal(false);
 
-  }
-  doStuff() {
-    alert('Hallo Welt!');
+  public show() {
+    console.log('hii');
+    this.showPrice.set(true);
   }
 }
 

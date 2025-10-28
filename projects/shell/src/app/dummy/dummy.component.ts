@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <!-- intentional left blank -->
+    <h1>This is the fallback</h1>
   `
 })
 export class DummyComponent {

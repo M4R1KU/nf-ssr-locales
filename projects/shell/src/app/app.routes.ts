@@ -16,5 +16,6 @@ export const routes: Routes = [
             exposedModule: './Component',
             fallback: DummyComponent
         })
+            .then(a => a.AppComponent)
     }
 ];

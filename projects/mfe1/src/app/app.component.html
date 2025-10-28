@@ -3,5 +3,11 @@
     <p>
         Micro Frontend with <span class="ssr">SSR</span>
     </p>
-    <a (click)="doStuff()">Do Stuff</a>
+
+    <button (click)="show()">Show price</button>
+
+    @if (showPrice()) {
+        <p>{{ 10503 | currency:'CHF' }}</p>
+        <p>{{ date | date }}</p>
+    }
 </div>
